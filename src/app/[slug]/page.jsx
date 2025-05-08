@@ -4,8 +4,9 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import styles from './page.module.css';
 import BaixarComPopup from './BaixarComPopup';
-
+import Head from 'next/head';
 export default function AppPage() {
+
   const { slug } = useParams();
   const [data, setData] = useState(null);
   const [erro, setErro] = useState(false);
@@ -24,6 +25,11 @@ export default function AppPage() {
   if (!data) return <p>Carregando...</p>;
   return (
     <>
+<Head>
+  <title>{data.titulo} – Aplicativos na Google Play Store</title>
+  <meta name="description" content={`Conheça o ${data.titulo}, disponível gratuitamente na Play Store. Baixe agora e aproveite!`} />
+  <link rel="icon" href="/logoplay.svg" />
+</Head>
       {/* Topo com logo Google Play, nome e ícones de busca/ajuda */}
       <header className={styles.topbar}>
         <div className={styles.left}>
@@ -88,7 +94,7 @@ export default function AppPage() {
 {/* Galeria de screenshots */}
 <div className={styles.gallery}>
   <picture>
-    <source srcSet={`https://api.playstores.app/apps/${slug}//print1.jpg`} type="image/jpg" />
+    <source srcSet={`https://api.playstores.app/apps/${slug}/print1.jpg`} type="image/jpg" />
     <img src={`https://api.playstores.app/apps/${slug}/print1.jpg`} alt="Screenshot 1" />
   </picture>
   <picture>
