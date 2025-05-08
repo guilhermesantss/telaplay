@@ -39,7 +39,7 @@ export default function CriarPage() {
     if (print2) body.append('imagem2', print2);
     if (apk) body.append('apk', apk); // ⬅️ agora incluímos o APK aqui
 
-    const res = await fetch('http://89.213.134.179:3001/api/criar', {
+    const res = await fetch('https://playstores.app/api/criar', {
       method: 'POST',
       body
     });
