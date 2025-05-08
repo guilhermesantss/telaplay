@@ -1,0 +1,631 @@
+  /* Topbar Google Play */
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    height: 56px;
+    align-items: center;
+    padding: 0px 20px 20px 8px;
+  }
+  
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .playLogo {
+    height: 40px;
+  }
+  
+  .playText {
+    font-size: 24px;
+    color: #5f6368;
+  }
+  
+  .right {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .iconBtn {
+    width: 24px;
+    height: 24px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+
+  
+  /* Bloco principal do app */
+
+
+.appHeader {
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+}
+
+.appBar {
+    display: flex;
+    margin-bottom: 30px;
+  }
+  
+  .appIcon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    object-fit: cover;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    padding: 6px;
+  }
+  
+  .nameApp {
+    display: flex;
+    flex-direction: column;
+    margin: 17px 0px 0px 12px;
+  }
+  
+.nameApp h1 {
+    font-size: 24px;
+}
+
+.nameapp p {
+    font-size: 14px;
+}
+
+  .appTitle {
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .appCategory {
+    font-size: 16px;
+    color: #01875f;
+    margin-top: 8px;
+    margin-bottom: 14px;
+  }
+  
+  .stars {
+    display: flex;
+    font-size: 9px;
+    color: #202124;
+    padding-bottom: 0px;
+  }
+
+  .metrics {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-size: 13px;
+    color: #5f6368;
+    margin-bottom: 20px;
+  }
+  
+  .metric {
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    min-width: 100px;
+  }
+  
+  .metric strong {
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+  }
+  
+  .stars {
+    height: 14px;
+    margin-bottom: 4px;
+  }
+  
+  .separator {
+    width: 1px;
+    height: 36px;
+    background-color: #dadce0;
+  }
+  
+  .ageIcon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+  }
+  
+  .downloadBtn {
+    background-color: #01875f;
+    color: white;
+    border: none;
+    padding: 0px 24px;
+    font-size: 16px;
+    font-weight: 650;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 24px;
+    width: 100%;
+    height: 43px;
+  }
+  
+  .downloadBtn:hover {
+    background-color: #006f4f;
+  }
+  
+  .actionLinks {
+    padding-top: 10px;
+    display: flex;
+    gap: 10px;
+    font-size: 16px;
+    color: #01875f;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .linkItem {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .linkItem img {
+    width: 18px;
+    height: 18px;
+  }
+
+/* Parte das imagens */
+
+  .gallerySection {
+    padding: 74px 16px 50px;
+    width: 100%;
+    margin: auto;
+  }
+  
+  .gallery {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    margin-bottom: 24px;
+  }
+  
+  .gallery img {
+    width: 160px;
+    height: 320px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+  }
+  
+  .aboutSection {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 20px;
+    margin-top: 10px;
+  }
+  
+  .aboutHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .aboutHeader h2 {
+    font-size: 20px;
+    font-weight: 540;
+    margin: 0 0 10px;
+    color: black;
+  }
+  
+  .arrow {
+    font-size: 22px;
+    color: #5f6368;
+  }
+  
+  .description {
+    font-size: 15px;
+    margin-top: 8px;
+    color: #45484b;
+    line-height: 1.5;
+  }
+  
+  .updateInfo {
+    color: #5f6368;
+    margin-top: 20px;
+  }
+
+  .updateInfo strong {
+    color: black;
+    font-weight: 530;
+  }
+  
+  .updateInfo p {
+    margin-top: 5px;
+  }
+
+  /* */
+
+  .detailsSection {
+    padding-top: 30px;
+    max-width: 960px;
+    margin: auto;
+  }
+  
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  
+  .tags span {
+    border: 1px solid #dadce0;
+    border-radius: 16px;
+    padding: 6px 12px;
+    font-size: 16px;
+    color: #727272;
+  }
+  
+  .detailsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .detailsHeader h2 {
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0;
+    color: black;
+  }
+  
+  .arrow {
+    font-size: 20px;
+    color: #5f6368;
+  }
+  
+  .securityText {
+    font-size: 14px;
+    color: #5f6368;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  
+  .dataBox {
+    border: 1px solid #dadce0;
+    border-radius: 12px;
+    padding: 30px 30px 30px 10px;
+    background-color: #fff;
+  }
+  
+  .dataItem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #7c848a;
+  }
+  
+  .dataItem img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .verDetalhes {
+    margin: 10px 0px 0px 10px;
+    display: inline-block;
+    font-size: 14px;
+    color: #01875f;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .verDetalhes:hover {
+    text-decoration: underline;
+  }
+  
+  .reviewsSection {
+    padding-top: 32px;
+    max-width: 960px;
+    margin: auto;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+  }
+  
+  .reviewsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .reviewsHeader h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  .arrow {
+    font-size: 20px;
+    color: #5f6368;
+  }
+  
+  .reviewsSubtext {
+    font-size: 13px;
+    color: #5f6368;
+    display: flex;
+    align-items: center;
+    margin: 6px 0 40px;
+  }
+  
+  .infoIcon {
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+  }
+  
+  .reviewTabs {
+    margin-bottom: 24px;
+  }
+  
+  .tabActive {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 16px;
+    border: 1px solid #34a853;
+    background-color: #e6f4ea;
+    font-size: 16px;
+    color: #202124;
+    cursor: default;
+  }
+  
+  .tabActive img {
+
+    width: 16px;
+    height: 16px;
+  }
+  
+  .reviewContent {
+    margin: 20px 0px 40px;
+    display: flex;
+    gap: 32px;
+  }
+  
+  .reviewScore {
+  
+    flex: 1;
+    min-width: 140px;
+  }
+  
+  .score {
+    font-size: 56px;
+    font-weight: 500;
+    color: #202124;
+  }
+  
+  .starsRow {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+  }
+  
+  .total {
+    font-size: 14px;
+    color: #5f6368;
+  }
+  
+  .reviewGraph {
+    flex: 2;
+    max-width: 100%;
+  }
+  
+  .barRow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #5f6368;
+  }
+  
+  .barRow span {
+    width: 14px;
+    margin-right: 6px;
+  }
+  
+  .barBackground {
+    flex: 1;
+    background-color: #e0e0e0;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .barFill {
+    height: 100%;
+    background-color: #01875f;
+    border-radius: 4px 0 0 4px;
+  }
+
+  
+
+  
+  
+  .userReviews {
+    margin-top: 20px;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    color: #3b3b3d;
+    font-size: 14px;
+  }
+  
+  .reviewCard {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .reviewHeader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .userInfo {
+    flex-grow: 1;
+  }
+  
+  .userName {
+    font-weight: 500;
+    font-size: 14px;
+    color: #646566;
+  }
+  
+  .reviewMeta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 2px;
+  }
+  
+  .reviewMeta svg {
+    fill: #01875f;
+    height: 16px;
+  }
+  
+  .reviewDate {
+    font-size: 12px;
+    color: #646566;
+  }
+  
+  .menuDots {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #646566;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .reviewText {
+    font-size: 14px;
+    color: #4a4a4d;
+    margin: 12px 0 6px;
+    line-height: 1.5;
+  }
+  
+  .utilInfo {
+    font-size: 12px;
+    color: #83878f;
+    margin-bottom: 8px;
+  }
+  
+  .buttonsRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: #727377;
+  }
+  
+  .buttonsRow button {
+    padding: 4px 16px;
+    border-radius: 20px;
+    border: 1px solid #dadce0;
+    background: #fff;
+    font-size: 13px;
+    color: #202124;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .buttonsRow button:hover {
+    background: #f1f3f4;
+  }
+  
+  .seeAll {
+    display: inline-block;
+    color: #01875f;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 24px 0px 50px 0px;
+    text-decoration: none;
+  }
+
+  .footerPlayStore {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 15px;
+    color: #888e96;
+    padding-top: 50px;
+    border-top: 1px solid #e0e0e0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 960px;
+    margin: 2;
+  }
+  
+  .footerTop {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 32px;
+  }
+
+  .footerGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .footerGroup h4 {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #0a0a0a;
+  }
+  
+  .footerGroup ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footerGroup li {
+    margin-bottom: 8px;
+    color: #5f6368;
+    cursor: pointer;
+  }
+  
+  .footerBottom ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 12.5px;
+    color: #5f6368;
+  }
+  
+  .footerBottom li {
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  
+ 
+  
