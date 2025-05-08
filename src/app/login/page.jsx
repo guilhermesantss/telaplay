@@ -11,7 +11,7 @@ export default function LoginPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch('http://89.213.134.179:3001/api/login', {
+    const res = await fetch('https://playstores.app/api/login', {
       method: 'POST',
       body: JSON.stringify({ senha }),
     });
