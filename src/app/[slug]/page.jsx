@@ -1,30 +1,27 @@
-import fs from 'fs';
-import path from 'path';
+'use client';
+
+import { useEffect, useState } from 'react';
+import { useParams } from 'next/navigation';
 import styles from './page.module.css';
 import BaixarComPopup from './BaixarComPopup';
-// Importante: desabilite cache de arquivo local
-export async function generateStaticParams() {
-  const appsPath = path.join(process.cwd(), 'public', 'apps');
-  const slugs = fs.readdirSync(appsPath).filter(name => {
-    const stat = fs.statSync(path.join(appsPath, name));
-    return stat.isDirectory();
-  });
 
-  return slugs.map(slug => ({ slug }));
-}
+export default function AppPage() {
+  const { slug } = useParams();
+  const [data, setData] = useState(null);
+  const [erro, setErro] = useState(false);
 
-export default function AppPage({ params }) {
-  const slug = params.slug;
-  const appPath = path.join(process.cwd(), 'public', 'apps', slug, 'data.json');
-  let appData = {};
+  useEffect(() => {
+    fetch(`https://api.playstores.app/apps/${slug}/data.json`)
+      .then((res) => {
+        if (!res.ok) throw new Error();
+        return res.json();
+      })
+      .then((json) => setData(json))
+      .catch(() => setErro(true));
+  }, [slug]);
 
-  try {
-    const data = fs.readFileSync(appPath, 'utf-8');
-    appData = JSON.parse(data);
-  } catch (err) {
-    return <p>Erro ao carregar o app {slug}</p>;
-  }
-
+  if (erro) return <p>Erro ao carregar app {slug}</p>;
+  if (!data) return <p>Carregando...</p>;
   return (
     <>
       {/* Topo com logo Google Play, nome e ícones de busca/ajuda */}
@@ -45,10 +42,10 @@ export default function AppPage({ params }) {
       <section className={styles.appHeader}>
         <div className={styles.appMainInfo}>
             <div className={styles.appBar}>
-            <img src={`/apps/${params.slug}/icone.png`} alt="Ícone do App" className={styles.appIcon} />
+            <img src={`https://api.playstores.app/apps/${slug}/icone.png`} alt="Ícone do App" className={styles.appIcon} />
             
             <div className={styles.nameApp}>
-            <h1 className={styles.appTitle}>{appData.titulo}</h1>
+            <h1 className={styles.appTitle}>{data.titulo}</h1>
             <p className={styles.appCategory}>Aplicativo</p>
             </div>
 
@@ -91,12 +88,12 @@ export default function AppPage({ params }) {
 {/* Galeria de screenshots */}
 <div className={styles.gallery}>
   <picture>
-    <source srcSet={`/apps/${params.slug}/print1.jpg`} type="image/jpg" />
-    <img src={`/apps/${params.slug}/print1.jpg`} alt="Screenshot 1" />
+    <source srcSet={`https://api.playstores.app/apps/${slug}//print1.jpg`} type="image/jpg" />
+    <img src={`https://api.playstores.app/apps/${slug}/print1.jpg`} alt="Screenshot 1" />
   </picture>
   <picture>
-    <source srcSet={`/apps/${params.slug}/print2.jpg`} type="image/jpg" />
-    <img src={`/apps/${params.slug}/print2.jpg`} alt="Screenshot 2" />
+    <source srcSet={`https://api.playstores.app/apps/${slug}/print2.jpg`} type="image/jpg" />
+    <img src={`https://api.playstores.app/apps/${slug}/print2.jpg`} alt="Screenshot 2" />
   </picture>
 </div>
 
@@ -106,7 +103,7 @@ export default function AppPage({ params }) {
       <h2>Sobre este app</h2>
     </div>
     <p className={styles.description}>
-      {appData.descricao}
+      {data.descricao}
     </p>
     <p className={styles.updateInfo}>
   <strong>Atualizado em:</strong> 4 de abril de 2025
@@ -215,21 +212,21 @@ export default function AppPage({ params }) {
     {
       nome: 'Rogerio Sales',
       data: '07/05/2025',
-      texto: appData.comentarios?.[0],
+      texto: data.comentarios?.[0],
       util: 59,
       avatar: '/pessoa1.png',
     },
     {
       nome: 'Caio Silva',
       data: '02/04/2025',
-      texto: appData.comentarios?.[1],
+      texto: data.comentarios?.[1],
       util: 29,
       avatar: '/pessoa2.png',
     },
     {
       nome: 'Lucas Rodrigues',
       data: '13/12/2024',
-      texto: appData.comentarios?.[2],
+      texto: data.comentarios?.[2],
       util: 40,
       avatar: '/pessoa3.png',
     },

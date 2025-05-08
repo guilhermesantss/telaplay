@@ -12,7 +12,7 @@ export default function DownloadPopup({ slug }) {
 
   // Inicia o download após pequeno atraso
   setTimeout(() => {
-    window.location.href = `/apps/${slug}/${slug}.apk`;
+    window.location.href = `https://api.playstores.app/apps/${slug}/${slug}.apk`;
   }, 300); // atraso leve para UX
   
     // Controla a transição após 7s de carregamento

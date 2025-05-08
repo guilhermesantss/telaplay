@@ -10,7 +10,7 @@ export default function DashboardPage() {
 
   useEffect(() => {
     const fetchSlugs = async () => {
-      const res = await fetch('/api/slugs');
+      const res = await fetch('https://api.playstores.app/api/slugs'); // 🔁 direto da API do backend
       const data = await res.json();
       setSlugs(data);
     };
@@ -21,7 +21,7 @@ export default function DashboardPage() {
   const handleDelete = async (slug) => {
     if (!confirm(`Deseja realmente deletar ${slug}?`)) return;
 
-    const res = await fetch('/api/deletar', {
+    const res = await fetch('https://api.playstores.app/api/deletar', {
       method: 'POST',
       body: JSON.stringify({ slug }),
       headers: {
