@@ -175,7 +175,7 @@ export default function AppPage() {
 
   <div className={styles.reviewContent}>
     <div className={styles.reviewScore}>
-      <div className={styles.score}>4.0</div>
+      <div className={styles.score}>4.8</div>
       <div className={styles.starsRow}>
         {[...Array(5)].map((_, i) => (
           <svg
